@@ -30,13 +30,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  db.select('*').from('users').then(users => {
-    users.json()
-  }).then(users => {
-    res.send("testing");
-  })
+  // db.select('*').from('users').then(users => {
+  //   users.json()
+  // }).then(users => {
+  //   res.send("testing");
+  // })
 
-  // res.send('keep trying :)')
+  res.send('keep trying :)')
   
 });
 
