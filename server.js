@@ -29,7 +29,7 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
   console.log(db.select('*').from('users'))
-  res.send("loaded", db.select('*').from('users'));
+  res.send("loaded");
 });
 
 app.post("/signin", (req, res) => {
