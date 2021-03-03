@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
   db.select('*').from('users').then(users => {
     users.json()
   }).then(users => {
-    res.send("loaded", users);
+    res.send("testing", users);
   })
 
   // res.send('keep trying :)')
