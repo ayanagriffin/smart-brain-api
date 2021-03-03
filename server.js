@@ -28,8 +28,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  console.log(db.select('*').from('users'))
-  res.send("loaded");
+  db.select('*').from('users').then(users => {
+    users.json()
+  }).then(users => {
+    res.send("loaded", users);
+  })
+  
 });
 
 app.post("/signin", (req, res) => {
