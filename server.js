@@ -21,11 +21,14 @@ const image = require("./controllers/image");
 const leaderboard = require("./controllers/leaderboard");
 app.use(cors());
 
+
+
 //MIDDLEWARE: used to parse JSON so express understands it
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
+  console.log(db.select('*').from('users'))
   res.send("success");
 });
 
