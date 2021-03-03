@@ -18,7 +18,7 @@ const handleRank = (req, res, db) => {
             res.json(scoresArray.indexOf(entries) + 1);
           });
       })
-      .catch((err) => res.status(400).json("error"));
+      .catch((err) => res.status(400).json("unable to get rank"));
   }
 
   const getScoresArray = (users) => {
