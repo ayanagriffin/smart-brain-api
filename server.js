@@ -63,6 +63,6 @@ app.delete("/user/:id", (req, res) => {
   user.handleDeleteUser(req, res, db);
 });
 
-app.listen(3000, () => {
-  console.log("app is running on port 3000");
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`app is running on port ${process.env.PORT}`);
 });
